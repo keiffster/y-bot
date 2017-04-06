@@ -15,21 +15,38 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-"""
-This is an example extension that allow syou to call an external service to retreive the bank balance
-of the customer. Currently contains no authentication
-"""
 import logging
 
-class TelecomMinutesExtension(object):
+from programy.utils.geo.google import GoogleMaps
+
+class GeoCodeExtension(object):
 
     # execute() is the interface that is called from the <extension> tag in the AIML
     def execute(self, bot, clientid, data):
-        logging.debug ("Telecom Minutes - Calling external service for with extra data [%s]"%(data))
+        logging.debug ("GeoCode [%s]"%(data))
 
-        #
-        # Add the logic to receive the phone minutes usage and format it into used and total
-        #
-        #
+        words = data.split(" ")
+        if words[0] == 'POSTCODE1':
+            location = words[1]
+        elif words[0] == 'POSTCODE2':
+            location = words[1] + words[2]
+        elif words[0] == 'LOCATION':
+            location = " ".join(words[1:])
+        else:
+            return None
 
-        return "0 0"
+        googlemaps = GoogleMaps()
+        latlng = googlemaps.get_latlong_for_location(location)
+        if latlng is not None:
+            str_lat = str(latlng.latitude)
+            str_lng = str(latlng.longitude)
+
+            lats = str_lat.split(".")
+            lngs = str_lng.split(".")
+
+            return "LATITUDE DEC %s FRAC %s LONGITUDE DEC %s FRAC %s"%(
+                lats[0], lats[1],
+                lngs[0], lngs[1]
+            )
+
+        return None

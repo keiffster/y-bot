@@ -15,21 +15,37 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-"""
-This is an example extension that allow syou to call an external service to retreive the bank balance
-of the customer. Currently contains no authentication
-"""
 import logging
 
-class TelecomMinutesExtension(object):
+from programy.utils.weather.metoffice import MetOffice
+from programy.utils.geo.google import GoogleMaps
+
+class WeatherExtension(object):
 
     # execute() is the interface that is called from the <extension> tag in the AIML
     def execute(self, bot, clientid, data):
-        logging.debug ("Telecom Minutes - Calling external service for with extra data [%s]"%(data))
 
-        #
-        # Add the logic to receive the phone minutes usage and format it into used and total
-        #
-        #
+        splits = data.split()
 
-        return "0 0"
+        if splits[0] == 'LOCATION':
+            postcode = splits[1]
+        else:
+            return None
+
+        if splits[2] == 'WHEN':
+            when = splits[3]
+        else:
+            return None
+
+        logging.debug("Getting weather for %s at time %s"%(postcode, when))
+
+        googlemaps = GoogleMaps()
+        latlng = googlemaps.get_latlong_for_location(postcode)
+
+        logging.debug ("Weather - Calling external weather service for with extra data [%s]"%(data))
+
+        met_office = MetOffice(bot.brain.license_keys)
+
+        observation = met_office.current_observation(latlng.latitude, latlng.longitude)
+
+        return observation.get_latest().to_program_y_text()
