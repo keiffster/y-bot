@@ -6,5 +6,5 @@ echo WARNING - Have you installed Sanic before running this [pip install sanic] 
 
 export PYTHONPATH=../../src:../../libs/MetOffer-1.3.2:.
 
-python3 ../../src/programy/clients/rest2.py --config ./config.production.yaml --cformat yaml --logging ./logging.production.yaml
+python3 ../../src/programy/clients/sanicrest.py --config ./config.production.yaml --cformat yaml --logging ./logging.production.yaml
 
