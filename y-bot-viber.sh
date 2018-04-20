@@ -2,7 +2,5 @@
 
 clear
 
-export PYTHONPATH=../../src:.
-
-python3 ../../src/programy/clients/restful/flask/viber/client.py --config ./config.yaml --cformat yaml --logging ./logging.yaml
+python3 -m programy.clients.restful.flask.viber.client --config ./config.yaml --cformat yaml --logging ./logging.yaml
 

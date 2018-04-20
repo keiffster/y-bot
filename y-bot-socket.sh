@@ -2,7 +2,5 @@
 
 clear
 
-export PYTHONPATH=../../src:.
-
-python3 ../../src/programy/clients/events/tcpsocket/client.py --config ./config.yaml --cformat yaml --logging ./logging.yaml
+python3 -m programy.clients.events.tcpsocket.client --config ./config.yaml --cformat yaml --logging ./logging.yaml
 
