@@ -2,5 +2,5 @@
 
 clear
 
-python3 -m programy.clients.polling.xmpp.client.py --config ./config.yaml --cformat yaml --logging ./logging.yaml
+python3 -m programy.clients.polling.xmpp.client --config ./config.yaml --cformat yaml --logging ./logging.yaml
 
