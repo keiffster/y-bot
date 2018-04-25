@@ -22,40 +22,9 @@
     <!-- REDMIND IN|EVERY X SECS|MINS|HOURS|DAYS|WEEKS MESSAGE ........... -->
 
     <category>
-        <pattern>REMIND ME IN * * TO *</pattern>
+        <pattern>WAKEY WAKEY</pattern>
         <template>
-            <srai>
-                SCHEDULE
-                <extension path="programy.extensions.scheduler.scheduler.SchedulerExtension">
-                    REMIND IN <star index="1" /> <star index="2" /> MESSAGE <star index="3" />
-                </extension>
-            </srai>
-        </template>
-    </category>
-
-    <category>
-        <pattern>SCHEDULE OK</pattern>
-        <template>
-            OK, thats scheduled
-        </template>
-    </category>
-
-    <category>
-        <pattern>SCHEDULE ERR</pattern>
-        <template>
-            Sorry, I was not able to set that reminder at this time
-        </template>
-    </category>
-
-    <category>
-        <pattern>ACTION IN * * TO *</pattern>
-        <template>
-            <srai>
-                SCHEDULE
-                <extension path="programy.extensions.scheduler.scheduler.SchedulerExtension">
-                    REMIND IN <star index="1" /> <star index="2" /> GRAMMAR <star index="3" />
-                </extension>
-            </srai>
+            Bing Bong! time to wake up!
         </template>
     </category>
 

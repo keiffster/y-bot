@@ -4,7 +4,7 @@ console:
   license_keys: $BOT_ROOT/config/license.keys
   scheduler:
     name: Scheduler1
-    debug_level: 0
+    debug_level: 50
     add_listeners: False
     remove_all_jobs: False
 
@@ -16,7 +16,7 @@ voice:
     classname: talky.clients.voice.tts.osxsay.OSXSayTextToSpeach
   pytts:
     classname: talky.clients.voice.tts.pyttssay.PyTTSSayTextToSpeach
-    rate_adjust: 50
+    rate_adjust: 10
   azhang:
     classname: talky.clients.voice.stt.azhang.AnthonyZhangSpeechToText
     ambient_adjust: 3
