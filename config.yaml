@@ -160,7 +160,7 @@ brain:
       default-get: unknown
       default-property: unknown
       default-map: unknown
-      learnf-path: $BOT_ROOT/aiml/learnf
+      learnf-path: $BOT_ROOT/aimlf
 
     # Nodes
     nodes:

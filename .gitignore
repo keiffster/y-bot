@@ -97,6 +97,8 @@ ENV/
 # Pylint output
 pylint.log
 
+aimlf
+
 # Ignore license key files
 license.keys
 /bots/y-bot/output/
