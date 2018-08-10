@@ -100,7 +100,7 @@ pylint.log
 aimlf
 
 # Ignore license key files
-license.keys
+storage/licences/license.keys
 /bots/y-bot/output/
 bots/y-bot/output/
 /bots/alice2/output/
@@ -120,3 +120,11 @@ bots/multibot/
 
 # Visual Studio code
 .vscode
+
+# Program-Y
+storage/conversations/
+storage/categories/learnf/
+storage/debug/
+storage/variables/
+storage/debug/
+
