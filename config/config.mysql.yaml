@@ -14,50 +14,56 @@ console:
           linked_accounts: sql
           links: sql
 
-          categories: file
-          errors: file
-          duplicates: file
-          learnf: file
-          conversations:   file
+          categories: sql
+          errors: sql
+          duplicates: sql
+          learnf: sql
+          conversations:   sql
 
-          maps: file
-          sets: file
-          rdf: file
+          maps: sql
+          sets: sql
+          rdf: sql
 
-          denormal: file
-          normal: file
-          gender: file
-          person: file
-          person2: file
-          regex_templates: file
+          denormal: sql
+          normal: sql
+          gender: sql
+          person: sql
+          person2: sql
+          regex_templates: sql
 
-          properties: file
-          variables: file
+          properties: sql
+          variables: sql
 
-          twitter: file
+          twitter: sql
 
-          spelling_corpus: file
-          license_keys: file
+          spelling_corpus: sql
+          license_keys: sql
 
-          template_nodes: file
-          pattern_nodes: file
+          template_nodes: sql
+          pattern_nodes: sql
 
-          binaries: file
-          braintree: file
+          binaries: sql
+          braintree: sql
 
-          preprocessors: file
-          postprocessors: file
+          preprocessors: sql
+          postprocessors: sql
 
-          usergroups: file
+          usergroups: sql
 
       stores:
-
-          mongo:
-              type:   mongo
+          sql:
+              type:   sql
               config:
-                  url: mongodb://localhost:27017/
-                  database: programy
-                  drop_all_first: true
+                  url: mysql+pymysql://root:password123@localhost:32773/programy
+                  echo: false
+                  encoding: utf-8
+                  create_db: false
+                  drop_all_first: false
+
+          logger:
+              type:   logger
+              config:
+                  conversation_logger: conversation
 
 voice:
   tts: osx

@@ -84,8 +84,7 @@
         </template>
     </category>
     <category>
-        <pattern>ASK PANNOUS WHAT IS <set>article</set> *
-        </pattern>
+        <pattern>ASK PANNOUS WHAT IS <set>article</set> *</pattern>
         <template>
             <think>
                 <set var="wndef">

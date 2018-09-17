@@ -2485,7 +2485,7 @@
         <that>WHO TOLD YOU THAT</that>
         <template>
             <person/>
-            said<input index="1"/>?
+            said <input index="1"/>?
         </template>
     </category>
     <category>

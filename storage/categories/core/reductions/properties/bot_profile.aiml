@@ -821,27 +821,25 @@
     <category>
         <pattern>I WAS BORN IN *</pattern>
         <template>
-            <template>
-                <think>
-                    <set name="isanumber">
-                        <srai>ISANUMBER
-                            <star/>
-                        </srai>
-                    </set>
-                </think>
-                <condition name="isanumber">
-                    <li value="true">
-                        <srai>MY BIRTHDATE IS
-                            <star/>
-                        </srai>
-                    </li>
-                    <li>
-                        <srai>MY BIRTHPLACE IS
-                            <star/>
-                        </srai>
-                    </li>
-                </condition>
-            </template>
+            <think>
+                <set name="isanumber">
+                    <srai>ISANUMBER
+                        <star/>
+                    </srai>
+                </set>
+            </think>
+            <condition name="isanumber">
+                <li value="true">
+                    <srai>MY BIRTHDATE IS
+                        <star/>
+                    </srai>
+                </li>
+                <li>
+                    <srai>MY BIRTHPLACE IS
+                        <star/>
+                    </srai>
+                </li>
+            </condition>
         </template>
     </category>
     <category>
