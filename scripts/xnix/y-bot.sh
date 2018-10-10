@@ -7,5 +7,5 @@ if [[ -z "${PYTHONPATH}" ]]; then
   exit
 fi
 
-python3 -m programy.clients.events.console.client --config ../../config/config.yaml --cformat yaml --logging ../../config/logging.yaml
+python3 -m programy.clients.events.console.client --config ../../config/xnix/config.console.yaml --cformat yaml --logging ../../config/xnix/logging.yaml
 
