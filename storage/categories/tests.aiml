@@ -51,10 +51,10 @@
     <category>
         <pattern>MY NAME IS *</pattern>
         <template>
-            <set name="uname">
+            <set name="name">
                 <star index="1"/>
             </set>
-            ,Nice name.
+            , nice name.
         </template>
     </category>
     <category>
