@@ -9,7 +9,7 @@ handlers:
     file:
         class: logging.handlers.RotatingFileHandler
         formatter: simple
-        filename: .\temp\y-bot.log
+        filename: y-bot.log
         maxBytes: 20972152
         backupCount: 10
         encoding: utf-8

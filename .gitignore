@@ -129,3 +129,5 @@ storage/variables/
 storage/debug/
 
 /storage/licenses/license.keys
+
+*.log
