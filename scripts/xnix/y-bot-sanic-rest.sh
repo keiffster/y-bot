@@ -2,7 +2,7 @@
 
 clear
 
-if [[ -z "${PYTHONPATH}" ]]; then
+if [ -z "${PYTHONPATH}" ]; then
   echo "PYTHONPATH is undefined"
   exit
 fi
