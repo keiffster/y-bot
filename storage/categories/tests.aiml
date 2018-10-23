@@ -60,7 +60,15 @@
     <category>
         <pattern>WHAT ARE YOU</pattern>
         <template>
-            I'm a bot, silly!
+            <random>
+                <li>I'm a bot</li>
+                <li>A bot</li>
+                <li>I'm a chatbot</li>
+                <li>A chatbot</li>
+                <li>A virtual agent</li>
+                <li>I am artificial intelligent agent</li>
+            </random>
+
         </template>
     </category>
     <category>
