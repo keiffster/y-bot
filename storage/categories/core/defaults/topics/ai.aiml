@@ -742,6 +742,12 @@
         </template>
     </category>
     <category>
+        <pattern>WHAT IS A CHATBOT</pattern>
+        <template>
+            <srai>WHAT IS A CHAT BOT</srai>
+        </template>
+    </category>
+    <category>
         <pattern>WHAT IS A CHAT BOT</pattern>
         <template>I am a chat bot. I am the original chat bot. Did you know that I am incapable of error?
             <think>
