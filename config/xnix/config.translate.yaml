@@ -29,7 +29,7 @@ console:
           regex_templates: file
 
           properties: file
-          defaults: file
+          variables: file
 
           twitter: file
 
@@ -94,6 +94,8 @@ console:
                   file: ../../storage/properties/properties.txt
                 defaults_storage:
                   file: ../../storage/properties/defaults.txt
+                variables_storage:
+                  dirs: ../../storage/variables
 
                 twitter_storage:
                   dirs: ../../storage/twitter
@@ -115,9 +117,9 @@ console:
                   file: ../../storage/braintree/braintree.xml
 
                 preprocessors_storage:
-                  file: ../../storage/processing/preprocessors.conf
+                  file: ../../storage/processing/preprocessors-translate.conf
                 postprocessors_storage:
-                  file: ../../storage/processing/postprocessors.conf
+                  file: ../../storage/processing/postprocessors-translate.conf
 
                 usergroups_storage:
                   file: ../../storage/security/usergroups.yaml
@@ -160,8 +162,22 @@ bot:
       save: true
       load: false
 
-    sentiment:
-      classname: programy.sentiment.textblob_sentiment.TextBlobSentimentAnalyser
+    from_translator:
+      classname: programy.translate.textblob_translator.TextBlobTranslator
+      # Specify which langauge you want translating from
+      #from: fr
+      # You to setting is the langauge your rules base is in
+      #to: en
+
+    to_translator:
+      classname: programy.translate.textblob_translator.TextBlobTranslator
+      # You from setting is the langauge your rules base is in
+      #from: en
+      # Specify the language your want your not to reply in
+      #to: fr
+
+      # Leaving to and from blank means bot will try to determine the langaug automatically
+      # and then reply in the language of your rules
 
 #####################################################################################################
 #
