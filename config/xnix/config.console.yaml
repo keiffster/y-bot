@@ -250,6 +250,8 @@ brain:
     dynamic:
         variables:
             gettime: programy.dynamic.variables.datetime.GetTime
+            spelling: programy.dynamic.variables.system.spelling.Spelling
+            splitter: programy.dynamic.variables.system.splitter.SentenceSplitter
         sets:
             numeric: programy.dynamic.sets.numeric.IsNumeric
             roman:   programy.dynamic.sets.roman.IsRomanNumeral
