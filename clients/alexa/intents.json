@@ -1,0 +1,346 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "cancel question",
+                        "cancel request",
+                        "cancel servus ai"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "end servus ai",
+                        "end conversation",
+                        "stop servus ai",
+                        "quit",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "what can I ask",
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AskWho",
+                    "samples": [
+                        "who {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskWhat",
+                    "samples": [
+                        "what {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskWhere",
+                    "samples": [
+                        "where {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskWhy",
+                    "samples": [
+                        "why {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskWhen",
+                    "samples": [
+                        "when {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskHow",
+                    "samples": [
+                        "how {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskYes",
+                    "samples": [
+                        "yes {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskNo",
+                    "samples": [
+                        "no {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskBut",
+                    "samples": [
+                        "but {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskIs",
+                    "samples": [
+                        "is {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskAre",
+                    "samples": [
+                        "are {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskWill",
+                    "samples": [
+                        "will {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskThen",
+                    "samples": [
+                        "then {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskThis",
+                    "samples": [
+                        "this {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskThat",
+                    "samples": [
+                        "that {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskWe",
+                    "samples": [
+                        "we {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskI",
+                    "samples": [
+                        "i {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskThey",
+                    "samples": [
+                        "they {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskA",
+                    "samples": [
+                        "a {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskAn",
+                    "samples": [
+                        "an {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskAfter",
+                    "samples": [
+                        "after {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskBefore",
+                    "samples": [
+                        "before {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskIt",
+                    "samples": [
+                        "it {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskTheQuestion",
+                    "samples": [
+                        "the question {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskToTellMe",
+                    "samples": [
+                        "to tell me {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "AskTheAnswerTo",
+                    "samples": [
+                        "the answer to {text}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                }
+            ],
+            "invocationName": "servus ai"
+        }
+    }
+}
