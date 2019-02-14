@@ -1,6 +1,6 @@
 webchat:
   description: Program-Y Webchat Client
-  host: 0.0.0.0
+  host: 127.0.0.1
   port: 8090
   debug: false
   api: /api/web/v1.0/ask
@@ -105,8 +105,8 @@ webchat:
                 spelling_storage:
                   file: ../../storage/spelling/corpus.txt
 
-                license_storage:
-                  file: ../../storage/licenses/license.keys
+                #license_storage:
+                #  file: ../../storage/licenses/license.keys
 
                 pattern_nodes_storage:
                   file: ../../storage/nodes/pattern_nodes.conf
