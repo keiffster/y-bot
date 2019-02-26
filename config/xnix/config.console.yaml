@@ -9,6 +9,9 @@ console:
     add_listeners: False
     remove_all_jobs: False
 
+  triggers:
+    manager: programy.triggers.local.LocalTriggerManager
+
   storage:
       entities:
           categories: file
@@ -46,6 +49,8 @@ console:
           postprocessors: file
 
           usergroups: file
+
+          triggers: file
 
       stores:
 
@@ -121,6 +126,9 @@ console:
 
                 usergroups_storage:
                   file: ../../storage/security/usergroups.yaml
+
+                triggers_storage:
+                  file: ../../storage/triggers/triggers.txt
 
           logger:
               type:   logger
