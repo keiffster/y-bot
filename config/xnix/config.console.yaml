@@ -9,8 +9,12 @@ console:
     add_listeners: False
     remove_all_jobs: False
 
-  triggers:
-    manager: programy.triggers.local.LocalTriggerManager
+  #triggers:
+  #  manager: programy.triggers.rest.RestTriggerManager
+  #  url: http://127.0.0.1:8989/api/rest/v1.0/trigger
+
+  #triggers:
+  #  manager: programy.triggers.local.LocalTriggerManager
 
   storage:
       entities:
