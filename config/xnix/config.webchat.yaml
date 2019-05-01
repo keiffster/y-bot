@@ -11,6 +11,13 @@ webchat:
     add_listeners: False
     remove_all_jobs: False
 
+  responder:
+    name: Responder
+    url: /api/web/v1.0/ping
+    shutdown: /api/web/v1.0/shutdown
+    register: http://127.0.0.1:5000/api/health/v1.0/register
+    unregister: http://127.0.0.1:5000/api/health/v1.0/unregister
+
   storage:
       entities:
           categories: file

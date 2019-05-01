@@ -1,5 +1,9 @@
 viber:
   description: Program-Y Viber Client
+  host: 127.0.0.1
+  port: 5000
+  debug: false
+  api: /api/viber/v1.0.ask
   name: Servusai
   avatar: http://viber.com/avatar.jpg
 

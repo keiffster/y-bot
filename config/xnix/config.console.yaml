@@ -16,6 +16,13 @@ console:
   #triggers:
   #  manager: programy.triggers.local.LocalTriggerManager
 
+  responder:
+    name: Responder
+    host: localhost
+    port: 6666
+    url: /api/console/v1.0/ping
+    shutdown: /api/console/v1.0/shutdown
+
   storage:
       entities:
           categories: file

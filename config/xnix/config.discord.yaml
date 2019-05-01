@@ -1,9 +1,5 @@
-line:
-  description: Program-Y Line Client
-  host: 127.0.0.1
-  port: 8084
-  debug: false
-  api: /api/line/v1.0.ask
+discord:
+  description: Program-Y Discord Client
 
   scheduler:
     name: Scheduler1

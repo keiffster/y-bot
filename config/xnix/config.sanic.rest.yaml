@@ -4,6 +4,7 @@ rest:
   port: 8989
   debug: false
   workers: 4
+  api: /api/sanic/v1.0.ask
 
   scheduler:
     name: Scheduler1

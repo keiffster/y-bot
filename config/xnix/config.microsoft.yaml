@@ -1,9 +1,7 @@
-line:
-  description: Program-Y Line Client
+microsoft:
+  description: Program-Y Microsoft Client
   host: 127.0.0.1
-  port: 8084
-  debug: false
-  api: /api/line/v1.0.ask
+  port: 9000
 
   scheduler:
     name: Scheduler1

@@ -5,6 +5,7 @@ kik:
   host: 127.0.0.1
   port: 8082
   debug: false
+  api: /api/kik/v1.0.ask
 
   scheduler:
     name: Scheduler1

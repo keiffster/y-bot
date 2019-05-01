@@ -3,6 +3,7 @@ alexa:
   host: 127.0.0.1
   port: 5001
   debug: False
+  api: /api/alexa/v1.0/ask
   launch_text: Hello and welcome
   #launch_srai: ALEXA_LAUNCH
   session_end_text:  Good bye matey
