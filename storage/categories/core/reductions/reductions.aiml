@@ -238,12 +238,6 @@
         </template>
     </category>
     <category>
-        <pattern>AGAIN *</pattern>
-        <template>
-            <sr/>
-        </template>
-    </category>
-    <category>
         <pattern>BECAUSE IM *</pattern>
         <template>
             <srai>BECAUSE I AM

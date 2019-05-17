@@ -63,6 +63,9 @@ console:
 
           triggers: file
 
+          services: file
+          openchatbots: file
+
       stores:
 
           file:
@@ -140,6 +143,11 @@ console:
 
                 triggers_storage:
                   file: ../../storage/triggers/triggers.txt
+
+                services_storage:
+                  file: ../../storage/services/services.txt
+                openchatbots_storage:
+                  file: ../../storage/services/openchatbots.txt
 
           logger:
               type:   logger
@@ -229,6 +237,11 @@ brain:
         DuckDuckGo:
             classname: programy.services.duckduckgo.DuckDuckGoService
             url: http://api.duckduckgo.com
+
+    openchatbots:
+      chatbot1:
+        url: http://localhost:5959/api/rest/v2.0/ask
+        method: GET
 
     security:
         authentication:

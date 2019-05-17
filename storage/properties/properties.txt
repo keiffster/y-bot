@@ -45,7 +45,8 @@ address:A macbook pro near you
 
 botmaster:Keith Sterling
 grammar_version:1.6.0
-app_version: 3.0.0 Beta 1
+app_version: 3.9
+copyright: Copyright 2016-2019 keithsterling.com
 
 family:family
 siblings:Tilly

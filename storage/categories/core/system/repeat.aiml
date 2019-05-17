@@ -20,9 +20,50 @@
     -->
 
     <category>
-        <pattern># AGAIN #</pattern>
+        <pattern>* AGAIN</pattern>
         <template>
-            <srai><request/></srai>
+            <srai>YAGAIN <uppercase><first><request><index>1</index></request></first></uppercase> 1</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>AGAIN *</pattern>
+        <template>
+            <srai>YAGAIN <uppercase><first><request><index>1</index></request></first></uppercase> 1</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>AGAIN</pattern>
+        <template>
+            <srai>YAGAIN <uppercase><first><request><index>1</index></request></first></uppercase> 1</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YAGAIN * *</pattern>
+        <template>
+            <think>
+                <set var="again"><star index="1"/></set>
+                <set var="count"><star index="2"/></set>
+            </think>
+
+            <condition var="again">
+                <li value="AGAIN">
+                    <think>
+                        <set var="count">
+                            <map name="successor">
+                                <map name="successor"><get var="count" /></map>
+                            </map>
+                        </set>
+                    </think>
+                    <srai>YAGAIN <uppercase><first><request><index><get var="count" /></index></request></first></uppercase> <get var="count" /></srai>
+                </li>
+                <li>
+                    <srai><get var="again" /></srai>
+                </li>
+            </condition>
+
         </template>
     </category>
 
