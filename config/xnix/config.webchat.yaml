@@ -4,6 +4,7 @@ webchat:
   port: 8090
   debug: false
   api: /api/web/v1.0/ask
+  renderer: programy.clients.render.html.HtmlRenderer
 
   scheduler:
     name: Scheduler1
@@ -128,7 +129,7 @@ webchat:
                 preprocessors_storage:
                   file: ../../storage/processing/preprocessors.conf
                 postprocessors_storage:
-                  file: ../../storage/processing/postprocessors.conf
+                  file: ../../storage/processing/postprocessors-webchat.conf
 
                 usergroups_storage:
                   file: ../../storage/security/usergroups.yaml

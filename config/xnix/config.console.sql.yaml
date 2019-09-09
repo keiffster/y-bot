@@ -1,5 +1,5 @@
 console:
-  description: Program-Y Console Client
+  description: Program-Y Console SQL Client
   bot:  bot
   prompt: ">>>"
 
@@ -8,6 +8,20 @@ console:
     debug_level: 50
     add_listeners: False
     remove_all_jobs: False
+
+  #triggers:
+  #  manager: programy.triggers.rest.RestTriggerManager
+  #  url: http://127.0.0.1:8989/api/rest/v1.0/trigger
+
+  #triggers:
+  #  manager: programy.triggers.local.LocalTriggerManager
+
+  responder:
+    name: Responder
+    host: localhost
+    port: 6666
+    url: /api/console/v1.0/ping
+    shutdown: /api/console/v1.0/shutdown
 
   storage:
       entities:
@@ -55,10 +69,10 @@ console:
           sql:
               type:   sql
               config:
-                  url: mysql+pymysql://root:password123@localhost:32773/programy
+                  url: mysql+pymysql://root:Password123@localhost:3306/programy
                   echo: false
                   encoding: utf-8
-                  create_db: false
+                  create_db: true
                   drop_all_first: false
 
           logger:
@@ -158,31 +172,31 @@ brain:
 
     oob:
       default:
-        classname: programy.oob.default.DefaultOutOfBandProcessor
+        classname: programy.oob.defaults.default.DefaultOutOfBandProcessor
       alarm:
-        classname: programy.oob.alarm.AlarmOutOfBandProcessor
+        classname: programy.oob.defaults.alarm.AlarmOutOfBandProcessor
       camera:
-        classname: programy.oob.camera.CameraOutOfBandProcessor
+        classname: programy.oob.defaults.camera.CameraOutOfBandProcessor
       clear:
-        classname: programy.oob.clear.ClearOutOfBandProcessor
+        classname: programy.oob.defaults.clear.ClearOutOfBandProcessor
       dial:
-        classname: programy.oob.dial.DialOutOfBandProcessor
+        classname: programy.oob.defaults.dial.DialOutOfBandProcessor
       dialog:
-        classname: programy.oob.dialog.DialogOutOfBandProcessor
+        classname: programy.oob.defaults.dialog.DialogOutOfBandProcessor
       email:
-        classname: programy.oob.email.EmailOutOfBandProcessor
+        classname: programy.oob.defaults.email.EmailOutOfBandProcessor
       geomap:
-        classname: programy.oob.map.MapOutOfBandProcessor
+        classname: programy.oob.defaults.map.MapOutOfBandProcessor
       schedule:
-        classname: programy.oob.schedule.ScheduleOutOfBandProcessor
+        classname: programy.oob.defaults.schedule.ScheduleOutOfBandProcessor
       search:
-        classname: programy.oob.search.SearchOutOfBandProcessor
+        classname: programy.oob.defaults.search.SearchOutOfBandProcessor
       sms:
-        classname: programy.oob.sms.SMSOutOfBandProcessor
+        classname: programy.oob.defaults.sms.SMSOutOfBandProcessor
       url:
-        classname: programy.oob.url.URLOutOfBandProcessor
+        classname: programy.oob.defaults.url.URLOutOfBandProcessor
       wifi:
-        classname: programy.oob.wifi.WifiOutOfBandProcessor
+        classname: programy.oob.defaults.wifi.WifiOutOfBandProcessor
 
     dynamic:
         variables:

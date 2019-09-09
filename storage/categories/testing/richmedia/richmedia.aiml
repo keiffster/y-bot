@@ -154,26 +154,10 @@
         <template>
             <list>
                 <item>
-                    <card>
-                        <image>https://www.facebook.com/147520292603297/photos/148487795839880/</image>
-                        <title>Servusai</title>
-                        <subtitle>The home of Program Y</subtitle>
-                        <button>
-                            <text>Servusai</text>
-                            <url>http://www.servusai.com</url>
-                        </button>
-                    </card>
+                    Item 1
                 </item>
                 <item>
-                    <card>
-                        <image>https://www.facebook.com/147520292603297/photos/148487795839880/</image>
-                        <title>Servusai</title>
-                        <subtitle>The home of Program Y</subtitle>
-                        <button>
-                            <text>AIML</text>
-                            <url>http://aiml.foundation</url>
-                        </button>
-                    </card>
+                    Item 2
                 </item>
             </list>
         </template>
@@ -183,27 +167,14 @@
         <pattern>RCS SHOW ORDERED LIST</pattern>
         <template>
             <olist>
-               <item>
-                    <card>
-                        <image>https://www.facebook.com/147520292603297/photos/148487795839880/</image>
-                        <title>Servusai</title>
-                        <subtitle>The home of Program Y</subtitle>
-                        <button>
-                            <text>Servusai</text>
-                            <url>http://www.servusai.com</url>
-                        </button>
-                    </card>
+                <item>
+                    Item 1
                 </item>
                 <item>
-                    <card>
-                        <image>https://www.facebook.com/147520292603297/photos/148487795839880/</image>
-                        <title>Servusai</title>
-                        <subtitle>The home of Program Y</subtitle>
-                        <button>
-                            <text>AIML</text>
-                            <url>http://aiml.foundation</url>
-                        </button>
-                    </card>
+                    Item 2
+                </item>
+                <item>
+                    Item 3
                 </item>
             </olist>
         </template>
@@ -220,5 +191,20 @@
             Thanks for that, I'll remember it
         </template>
     </category>
+
+    <category>
+        <pattern>RCS SHOW MIXED</pattern>
+        <template>
+            Here is a button to go to Servusai
+            <br />
+            <button>
+                <text>Servusai</text>
+                <postback>SERVUSAI</postback>
+            </button>
+            <br />
+            Click it if you like.
+        </template>
+    </category>
+
 
 </aiml>
