@@ -62,6 +62,7 @@ console:
 
           preprocessors: sql
           postprocessors: sql
+          postquestionprocessors: sql
 
           usergroups: sql
 

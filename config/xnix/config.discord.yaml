@@ -118,6 +118,10 @@ discord:
                   file: ../../storage/processing/preprocessors.conf
                 postprocessors_storage:
                   file: ../../storage/processing/postprocessors.conf
+                postquestionprocessors_storage:
+                  file: ../../storage/processing/postquestionprocessors.conf
+                postquestionprocessors_storage:
+                  file: ../../storage/processing/postquestionprocessors.conf
 
                 usergroups_storage:
                   file: ../../storage/security/usergroups.yaml

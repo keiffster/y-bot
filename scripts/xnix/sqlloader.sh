@@ -35,6 +35,7 @@ python3 -m programy.storage.stores.sql.loader --entity templatenodes --url mysql
 # Processors
 python3 -m programy.storage.stores.sql.loader --entity postprocessors --url mysql+pymysql://root:Password123@localhost:3306/programy --file ../../storage/processing/postprocessors.conf --verbose
 python3 -m programy.storage.stores.sql.loader --entity preprocessors --url mysql+pymysql://root:Password123@localhost:3306/programy --file ../../storage/processing/preprocessors.conf --verbose
+python3 -m programy.storage.stores.sql.loader --entity postquestionprocessors --url mysql+pymysql://root:Password123@localhost:3306/programy --file ../../storage/processing/postquestionprocessors.conf --verbose
 
 # Spelling
 python3 -m programy.storage.stores.sql.loader --entity spelling --url mysql+pymysql://root:Password123@localhost:3306/programy --file ../../storage/spelling/corpus.txt --verbose

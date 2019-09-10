@@ -38,8 +38,9 @@ python3 -m programy.storage.stores.nosql.mongo.loader --entity patternnodes --ur
 python3 -m programy.storage.stores.nosql.mongo.loader --entity templatenodes --url mongodb://localhost:32768/ -b programy --file ../../storage/nodes/template_nodes.conf --verboseX
 
 # Processors
-python3 -m programy.storage.stores.nosql.mongo.loader --entity postprocessors --url mongodb://localhost:32768/ -b programy --file ../../storage/processing/postprocessors.conf --verboseX
 python3 -m programy.storage.stores.nosql.mongo.loader --entity preprocessors --url mongodb://localhost:32768/ -b programy --file ../../storage/processing/preprocessors.conf --verboseX
+python3 -m programy.storage.stores.nosql.mongo.loader --entity postprocessors --url mongodb://localhost:32768/ -b programy --file ../../storage/processing/postprocessors.conf --verboseX
+python3 -m programy.storage.stores.nosql.mongo.loader --entity postquestionprocessors --url mongodb://localhost:32768/ -b programy --file ../../storage/processing/postquestionprocessors.conf --verboseX
 
 # Spelling
 python3 -m programy.storage.stores.nosql.mongo.loader --entity spelling --url mongodb://localhost:32768/ -b programy --file ../../storage/spelling/corpus.txt --verboseX
