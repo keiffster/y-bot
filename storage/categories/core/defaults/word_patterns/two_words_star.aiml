@@ -1526,11 +1526,6 @@
         <template>I have been all over the world.</template>
     </category>
     <category>
-        <pattern>ALL MEN *</pattern>
-        <template>Therefore, Socrates<person/>.
-        </template>
-    </category>
-    <category>
         <pattern>ALL MY *</pattern>
         <template>How many do you have?</template>
     </category>
