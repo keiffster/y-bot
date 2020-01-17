@@ -45,6 +45,7 @@
     <category>
         <pattern>OOB DIAL *</pattern>
         <template>
+            Ok, dialing <star />
             <oob>
                 <dial><star /></dial>
             </oob>
