@@ -151,34 +151,6 @@ console:
                     classname: programy.security.authorise.usergroupsauthorisor.BasicUserGroupAuthorisationService
                     denied_srai: AUTHORISATION_FAILED
 
-            oob:
-              default:
-                classname: programy.oob.default.DefaultOutOfBandProcessor
-              alarm:
-                classname: programy.oob.alarm.AlarmOutOfBandProcessor
-              camera:
-                classname: programy.oob.camera.CameraOutOfBandProcessor
-              clear:
-                classname: programy.oob.clear.ClearOutOfBandProcessor
-              dial:
-                classname: programy.oob.dial.DialOutOfBandProcessor
-              dialog:
-                classname: programy.oob.dialog.DialogOutOfBandProcessor
-              email:
-                classname: programy.oob.email.EmailOutOfBandProcessor
-              geomap:
-                classname: programy.oob.map.MapOutOfBandProcessor
-              schedule:
-                classname: programy.oob.schedule.ScheduleOutOfBandProcessor
-              search:
-                classname: programy.oob.search.SearchOutOfBandProcessor
-              sms:
-                classname: programy.oob.sms.SMSOutOfBandProcessor
-              url:
-                classname: programy.oob.url.URLOutOfBandProcessor
-              wifi:
-                classname: programy.oob.wifi.WifiOutOfBandProcessor
-
             dynamic:
                 variables:
                     gettime: programy.dynamic.variables.datetime.GetTime
