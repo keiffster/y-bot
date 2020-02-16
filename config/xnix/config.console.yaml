@@ -24,142 +24,142 @@ console:
     shutdown: /api/console/v1.0/shutdown
 
   storage:
-      entities:
-          categories: file
-          errors: file
-          duplicates: file
-          learnf: file
-          conversations:   file
+    entities:
+      categories: file
+      errors: file
+      duplicates: file
+      learnf: file
+      conversations:   file
 
-          maps: file
-          sets: file
-          rdf: file
+      maps: file
+      sets: file
+      rdf: file
 
-          denormal: file
-          normal: file
-          gender: file
-          person: file
-          person2: file
-          regex_templates: file
+      denormal: file
+      normal: file
+      gender: file
+      person: file
+      person2: file
+      regex_templates: file
 
-          properties: file
-          defaults: file
+      properties: file
+      defaults: file
 
-          twitter: file
+      twitter: file
 
-          spelling_corpus: file
-          license_keys: file
+      spelling_corpus: file
+      license_keys: file
 
-          template_nodes: file
-          pattern_nodes: file
+      template_nodes: file
+      pattern_nodes: file
 
-          binaries: file
-          braintree: file
+      binaries: file
+      braintree: file
 
-          preprocessors: file
-          postprocessors: file
+      preprocessors: file
+      postprocessors: file
 
-          usergroups: file
+      usergroups: file
 
-          triggers: file
+      triggers: file
 
-          oobs: file
-          services: file
-          openchatbots: file
+      oobs: file
+      services: file
+      openchatbots: file
 
-      stores:
+    stores:
 
-          file:
-              type:   file
-              config:
-                categories_storage:
-                  dirs: ../../storage/categories
-                  subdirs: true
-                  extension: .aiml
-                errors_storage:
-                  file: ../../storage/debug/errors.txt
-                duplicates_storage:
-                  file: ../../storage/debug/duplicates.txt
-                learnf_storage:
-                  dirs: ../../storage/categories/learnf
+      file:
+        type:   file
+        config:
+          categories_storage:
+            dirs: ../../storage/categories
+            subdirs: true
+            extension: .aiml
+          errors_storage:
+            file: ../../storage/debug/errors.txt
+          duplicates_storage:
+            file: ../../storage/debug/duplicates.txt
+          learnf_storage:
+            dirs: ../../storage/categories/learnf
 
-                conversation_storage:
-                  dirs: ../../storage/conversations
+          conversation_storage:
+            dirs: ../../storage/conversations
 
-                sets_storage:
-                  dirs: ../../storage/sets
-                  extension: txt
-                maps_storage:
-                  dirs: ../../storage/maps
-                  extension: txt
-                rdf_storage:
-                  dirs: ../../storage/rdfs
-                  subdirs: true
-                  extension: txt
+          sets_storage:
+            dirs: ../../storage/sets
+            extension: txt
+          maps_storage:
+            dirs: ../../storage/maps
+            extension: txt
+          rdf_storage:
+            dirs: ../../storage/rdfs
+            subdirs: true
+            extension: txt
 
-                denormal_storage:
-                  file: ../../storage/lookups/denormal.txt
-                normal_storage:
-                  file: ../../storage/lookups/normal.txt
-                gender_storage:
-                  file: ../../storage/lookups/gender.txt
-                person_storage:
-                  file: ../../storage/lookups/person.txt
-                person2_storage:
-                  file: ../../storage/lookups/person2.txt
-                regex_storage:
-                  file: ../../storage/regex/regex-templates.txt
+          denormal_storage:
+            file: ../../storage/lookups/denormal.txt
+          normal_storage:
+            file: ../../storage/lookups/normal.txt
+          gender_storage:
+            file: ../../storage/lookups/gender.txt
+          person_storage:
+            file: ../../storage/lookups/person.txt
+          person2_storage:
+            file: ../../storage/lookups/person2.txt
+          regex_storage:
+            file: ../../storage/regex/regex-templates.txt
 
-                properties_storage:
-                  file: ../../storage/properties/properties.txt
-                defaults_storage:
-                  file: ../../storage/properties/defaults.txt
+          properties_storage:
+            file: ../../storage/properties/properties.txt
+          defaults_storage:
+            file: ../../storage/properties/defaults.txt
 
-                twitter_storage:
-                  dirs: ../../storage/twitter
+          twitter_storage:
+            dirs: ../../storage/twitter
 
-                spelling_storage:
-                  file: ../../storage/spelling/corpus.txt
+          spelling_storage:
+            file: ../../storage/spelling/corpus.txt
 
-                license_storage:
-                  file: ../../storage/licenses/license.keys
+          license_storage:
+            file: ../../storage/licenses/license.keys
 
-                pattern_nodes_storage:
-                  file: ../../storage/nodes/pattern_nodes.conf
-                template_nodes_storage:
-                  file: ../../storage/nodes/template_nodes.conf
+          pattern_nodes_storage:
+            file: ../../storage/nodes/pattern_nodes.conf
+          template_nodes_storage:
+            file: ../../storage/nodes/template_nodes.conf
 
-                binaries_storage:
-                  file: ../../storage/braintree/braintree.bin
-                braintree_storage:
-                  file: ../../storage/braintree/braintree.xml
+          binaries_storage:
+            file: ../../storage/braintree/braintree.bin
+          braintree_storage:
+            file: ../../storage/braintree/braintree.xml
 
-                preprocessors_storage:
-                  file: ../../storage/processing/preprocessors.conf
-                postprocessors_storage:
-                  file: ../../storage/processing/postprocessors.conf
-                postquestionprocessors_storage:
-                  file: ../../storage/processing/postquestionprocessors.conf
+          preprocessors_storage:
+            file: ../../storage/processing/preprocessors.conf
+          postprocessors_storage:
+            file: ../../storage/processing/postprocessors.conf
+          postquestionprocessors_storage:
+            file: ../../storage/processing/postquestionprocessors.conf
 
-                usergroups_storage:
-                  file: ../../storage/security/usergroups.yaml
+          usergroups_storage:
+            file: ../../storage/security/usergroups.yaml
 
-                triggers_storage:
-                  file: ../../storage/triggers/triggers.txt
+          triggers_storage:
+            file: ../../storage/triggers/triggers.txt
 
-                services_storage:
-                  file: ../../storage/services/services.txt
+          services_storage:
+            file: ../../storage/services/services.txt
 
-                openchatbots_storage:
-                  file: ../../storage/services/openchatbots/openchatbots.txt
+          openchatbots_storage:
+            file: ../../storage/services/openchatbots/openchatbots.txt
 
-                oobs_storage:
-                  file: ../../storage/oob/callmon.conf
+          oobs_storage:
+            file: ../../storage/oob/callmon.conf
 
-          logger:
-              type:   logger
-              config:
-                  conversation_logger: conversation
+      logger:
+        type:   logger
+        config:
+          conversation_logger: conversation
 
   bots:
     bot:
@@ -223,21 +223,21 @@ console:
             create: False
 
           services:
-              REST:
-                  classname: programy.services.rest.GenericRESTService
-                  method: GET
-                  host: 0.0.0.0
-              Pannous:
-                  classname: programy.services.pannous.PannousService
-                  url: http://weannie.pannous.com/api
-              Pandora:
-                  classname: programy.services.pandora.PandoraService
-                  url: http://www.pandorabots.com/pandora/talk-xml
-              Wikipedia:
-                  classname: programy.services.wikipediaservice.WikipediaService
-              DuckDuckGo:
-                  classname: programy.services.duckduckgo.DuckDuckGoService
-                  url: http://api.duckduckgo.com
+            REST:
+              classname: programy.services.rest.GenericRESTService
+              method: GET
+              host: 0.0.0.0
+            Pannous:
+              classname: programy.services.pannous.PannousService
+              url: http://weannie.pannous.com/api
+            Pandora:
+              classname: programy.services.pandora.PandoraService
+              url: http://www.pandorabots.com/pandora/talk-xml
+            Wikipedia:
+              classname: programy.services.wikipediaservice.WikipediaService
+            DuckDuckGo:
+              classname: programy.services.duckduckgo.DuckDuckGoService
+              url: http://api.duckduckgo.com
 
           openchatbots:
             chatbot1:
@@ -245,26 +245,26 @@ console:
               method: GET
 
           security:
-              authentication:
-                  classname: programy.security.authenticate.passthrough.BasicPassThroughAuthenticationService
-                  denied_srai: AUTHENTICATION_FAILED
-              authorisation:
-                  classname: programy.security.authorise.usergroupsauthorisor.BasicUserGroupAuthorisationService
-                  denied_srai: AUTHORISATION_FAILED
+            authentication:
+              classname: programy.security.authenticate.passthrough.BasicPassThroughAuthenticationService
+              denied_srai: AUTHENTICATION_FAILED
+            authorisation:
+              classname: programy.security.authorise.usergroupsauthorisor.BasicUserGroupAuthorisationService
+              denied_srai: AUTHORISATION_FAILED
 
           dynamic:
-              variables:
-                  gettime: programy.dynamic.variables.datetime.GetTime
-                  spelling: programy.dynamic.variables.system.spelling.Spelling
-                  splitter: programy.dynamic.variables.system.splitter.SentenceSplitter
-              sets:
-                  numeric:  programy.dynamic.sets.numeric.IsNumeric
-                  roman:    programy.dynamic.sets.roman.IsRomanNumeral
-                  stopword: programy.dynamic.sets.stopword.IsStopWord
-                  synset:   programy.dynamic.sets.synsets.IsSynset
-              maps:
-                  romantodec: programy.dynamic.maps.roman.MapRomanToDecimal
-                  dectoroman: programy.dynamic.maps.roman.MapDecimalToRoman
-                  lemmatize:  programy.dynamic.maps.lemmatize.LemmatizeMap
-                  stemmer:    programy.dynamic.maps.stemmer.StemmerMap
+            variables:
+              gettime: programy.dynamic.variables.datetime.GetTime
+              spelling: programy.dynamic.variables.system.spelling.Spelling
+              splitter: programy.dynamic.variables.system.splitter.SentenceSplitter
+            sets:
+              numeric:  programy.dynamic.sets.numeric.IsNumeric
+              roman:    programy.dynamic.sets.roman.IsRomanNumeral
+              stopword: programy.dynamic.sets.stopword.IsStopWord
+              synset:   programy.dynamic.sets.synsets.IsSynset
+            maps:
+              romantodec: programy.dynamic.maps.roman.MapRomanToDecimal
+              dectoroman: programy.dynamic.maps.roman.MapDecimalToRoman
+              lemmatize:  programy.dynamic.maps.lemmatize.LemmatizeMap
+              stemmer:    programy.dynamic.maps.stemmer.StemmerMap
 
