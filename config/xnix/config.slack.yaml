@@ -1,6 +1,10 @@
 slack:
   description: Program-Y Slack Client
   polling_interval: 1
+  username: ChatillyBot
+  reply_to_direct: True
+  reply_to_mention: True
+  reply_to_all: True
 
   scheduler:
     name: Scheduler1
