@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-export PYTHONPATH=../../../program-y/src
+if [ -z "${PYTHONPATH}" ]; then
+  echo "PYTHONPATH is undefined"
+  exit
+fi
 
 # Categories
 python3 -m programy.storage.stores.sql.loader --entity categories --url mysql+pymysql://root:Password123@localhost:3306/programy --dir ../../storage/categories --subdir --extension=.aiml --verbose

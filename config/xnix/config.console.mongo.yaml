@@ -56,7 +56,7 @@ console:
       mongo:
         type:   mongo
         config:
-          url: mongodb://localhost:32768/
+          url: mongodb://localhost:27017
           database: programy
           drop_all_first: false
 
@@ -118,23 +118,6 @@ console:
           braintree:
             create: False
 
-          services:
-            REST:
-              classname: programy.services.rest.GenericRESTService
-              method: GET
-              host: 0.0.0.0
-            Pannous:
-              classname: programy.services.pannous.PannousService
-              url: http://weannie.pannous.com/api
-            Pandora:
-              classname: programy.services.pandora.PandoraService
-              url: http://www.pandorabots.com/pandora/talk-xml
-            Wikipedia:
-              classname: programy.services.wikipediaservice.WikipediaService
-            DuckDuckGo:
-              classname: programy.services.duckduckgo.DuckDuckGoService
-              url: http://api.duckduckgo.com
-
           security:
             authentication:
               classname: programy.security.authenticate.passthrough.BasicPassThroughAuthenticationService
@@ -142,7 +125,6 @@ console:
             authorisation:
               classname: programy.security.authorise.usergroupsauthorisor.BasicUserGroupAuthorisationService
               denied_srai: AUTHORISATION_FAILED
-
 
           dynamic:
             variables:

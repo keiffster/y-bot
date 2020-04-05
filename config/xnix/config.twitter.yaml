@@ -1,12 +1,17 @@
 twitter:
   description: Program-Y Twitter Client
-  polling: true
-  polling_interval: 49
-  streaming: false
-  use_status: true
-  use_direct_message: true
-  auto_follow: true
-  welcome_message: Thanks for following me, send me a message and I'll try and help
+  polling_interval: 60
+  rate_limit_sleep: 900
+
+  follow_followers: True
+  respond_to_mentions: True
+  respond_to_directs: False
+
+  mentions: |
+    #askprogramy
+    #programy
+
+  welcome_message: "Thanks for following me."
 
   scheduler:
     name: Scheduler1
@@ -53,7 +58,6 @@ twitter:
       usergroups: file
 
     stores:
-
       file:
         type:   file
         config:
@@ -195,22 +199,6 @@ twitter:
           braintree:
             create: False
 
-          services:
-            REST:
-              classname: programy.services.rest.GenericRESTService
-              method: GET
-              host: 0.0.0.0
-            Pannous:
-              classname: programy.services.pannous.PannousService
-              url: http://weannie.pannous.com/api
-            Pandora:
-              classname: programy.services.pandora.PandoraService
-              url: http://www.pandorabots.com/pandora/talk-xml
-            Wikipedia:
-              classname: programy.services.wikipediaservice.WikipediaService
-            DuckDuckGo:
-              classname: programy.services.duckduckgo.DuckDuckGoService
-              url: http://api.duckduckgo.com
 
           security:
             authentication:

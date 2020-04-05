@@ -3,7 +3,7 @@ google:
   host: 127.0.0.1
   port: 5001
   debug: False
-  api: /api/google/v1.0.ask
+  api: /api/google/v1.0/ask
 
   scheduler:
     name: Scheduler1
@@ -192,22 +192,6 @@ google:
           braintree:
             create: False
 
-          services:
-            REST:
-              classname: programy.services.rest.GenericRESTService
-              method: GET
-              host: 0.0.0.0
-            Pannous:
-              classname: programy.services.pannous.PannousService
-              url: http://weannie.pannous.com/api
-            Pandora:
-              classname: programy.services.pandora.PandoraService
-              url: http://www.pandorabots.com/pandora/talk-xml
-            Wikipedia:
-              classname: programy.services.wikipediaservice.WikipediaService
-            DuckDuckGo:
-              classname: programy.services.duckduckgo.DuckDuckGoService
-              url: http://api.duckduckgo.com
 
           security:
             authentication:
