@@ -1,0 +1,160 @@
+console:
+  description: Program-Y Console SQL Client
+  prompt: ">>>"
+
+  scheduler:
+    name: Scheduler1
+    debug_level: 50
+    add_listeners: False
+    remove_all_jobs: False
+
+  #triggers:
+  #  manager: programy.triggers.rest.RestTriggerManager
+  #  url: http://127.0.0.1:8989/api/rest/v1.0/trigger
+
+  #triggers:
+  #  manager: programy.triggers.local.LocalTriggerManager
+
+  responder:
+    name: Responder
+    host: localhost
+    port: 6666
+    url: /api/console/v1.0/ping
+    shutdown: /api/console/v1.0/shutdown
+
+  storage:
+    entities:
+      users: sql
+      linked_accounts: sql
+      links: sql
+
+      categories: sql
+      errors: sql
+      duplicates: sql
+      learnf: sql
+      conversations:   sql
+
+      maps: sql
+      sets: sql
+      rdf: sql
+
+      denormal: sql
+      normal: sql
+      gender: sql
+      person: sql
+      person2: sql
+      regex_templates: sql
+
+      properties: sql
+      variables: sql
+
+      twitter: sql
+
+      spelling_corpus: sql
+      license_keys: sql
+
+      template_nodes: sql
+      pattern_nodes: sql
+
+      binaries: sql
+      braintree: sql
+
+      preprocessors: sql
+      postprocessors: sql
+      postquestionprocessors: sql
+
+      usergroups: sql
+
+    stores:
+      sql:
+        type:   sql
+        config:
+          url: mysql+pymysql://root:Password123@localhost:3306/programy
+          echo: false
+          encoding: utf-8
+          create_db: true
+          drop_all_first: false
+
+      logger:
+        type:   logger
+        config:
+          conversation_logger: conversation
+
+  bots:
+    bot:
+      brain: brain
+
+      initial_question: Hi, how can I help you today?
+      initial_question_srai: YINITIALQUESTION
+      default_response: Sorry, I don't have an answer for that!
+      default_response_srai: YEMPTY
+      empty_string: YEMPTY
+      exit_response: So long, and thanks for the fish!
+      exit_response_srai: YEXITRESPONSE
+
+      override_properties: true
+
+      max_question_recursion: 1000
+      max_question_timeout: 60
+      max_search_depth: 100
+      max_search_timeout: 60
+
+      spelling:
+        load: true
+        classname: programy.spelling.norvig.NorvigSpellingChecker
+        corpus: file
+        check_before: false
+        check_and_retry: false
+
+      conversations:
+        save: true
+        load: false
+        storage: file
+
+      brains:
+        brain:
+
+          # Overrides
+          overrides:
+            allow_system_aiml: true
+            allow_learn_aiml: true
+            allow_learnf_aiml: true
+
+          # Defaults
+          defaults:
+            default_get: unknown
+            default_property: unknown
+            default_map: unknown
+
+          # Binary
+          binaries:
+            save_binary: false
+            load_binary: false
+            load_aiml_on_binary_fail: false
+
+          debugfiles:
+            save-errors: true
+            save-duplicates: true
+
+          # Braintree
+          braintree:
+            create: False
+
+          security:
+            authentication:
+              classname: programy.security.authenticate.passthrough.BasicPassThroughAuthenticationService
+              denied_srai: AUTHENTICATION_FAILED
+            authorisation:
+              classname: programy.security.authorise.usergroupsauthorisor.BasicUserGroupAuthorisationService
+              denied_srai: AUTHORISATION_FAILED
+
+          dynamic:
+            variables:
+              gettime: programy.dynamic.variables.datetime.GetTime
+            sets:
+              numeric: programy.dynamic.sets.numeric.IsNumeric
+              roman:   programy.dynamic.sets.roman.IsRomanNumeral
+            maps:
+              romantodec: programy.dynamic.maps.roman.MapRomanToDecimal
+              dectoroman: programy.dynamic.maps.roman.MapDecimalToRoman
+

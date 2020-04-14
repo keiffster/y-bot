@@ -4,7 +4,7 @@ cls
 
 if not defined PYTHONPATH goto error
 
-python3 -m programy.clients.restful.flask.alexa.client --config ..\..\config\windows\config.alexa.yaml --cformat yaml --logging ..\..\config\windows\logging.yaml
+python -m programy.clients.restful.flask.alexa.client --config ..\..\config\windows\config.alexa.yaml --cformat yaml --logging ..\..\config\windows\logging.yaml
 goto end
 
 :error

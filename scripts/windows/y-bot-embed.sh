@@ -1,13 +1,16 @@
-#! /bin/sh
+@echo off
 
-clear
+cls
 
-if [ -z "${PYTHONPATH}" ]; then
-  echo "PYTHONPATH is undefined"
-  exit
-fi
+if not defined PYTHONPATH goto error
 
-python3 -m programy.clients.embed.basic ../../config/xnix/config.console.yaml
+python -m programy.clients.embed.basic ..\..\config\windows\config.console.yaml
+goto end
+
+:error
+echo PYTHONPATH not set!
+
+:end
 
 
 

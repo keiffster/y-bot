@@ -1,11 +1,15 @@
-#! /bin/sh
+@echo off
 
-clear
+cls
 
-if [ -z "${PYTHONPATH}" ]; then
-  echo "PYTHONPATH is undefined"
-  exit
-fi
+if not defined PYTHONPATH goto error
 
-python3 -m programy.clients.events.console.autoanswer --config ../../config/xnix/config.console.yaml --cformat yaml --logging ../../config/xnix/logging.yaml --qandas ./qandas.csv
+python -m programy.clients.events.console.autoanswer --config ..\..\config\windows\config.console.yaml --cformat yaml --logging ..\..\config\windows\logging.yaml --qandas ./qandas.csv
+goto end
+
+:error
+echo PYTHONPATH not set!
+
+:end
+
 

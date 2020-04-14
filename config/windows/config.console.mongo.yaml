@@ -1,0 +1,138 @@
+console:
+  description: Program-Y Console Client
+  bot:  bot
+  prompt: ">>>"
+
+  scheduler:
+    name: Scheduler1
+    debug_level: 50
+    add_listeners: False
+    remove_all_jobs: False
+
+  storage:
+    entities:
+      users: mongo
+      linked_accounts: mongo
+      links: mongo
+
+      categories: mongo
+      errors: mongo
+      duplicates: mongo
+      learnf: mongo
+      conversations:   mongo
+
+      maps: mongo
+      sets: mongo
+      rdf: mongo
+
+      denormal: mongo
+      normal: mongo
+      gender: mongo
+      person: mongo
+      person2: mongo
+      regex_templates: mongo
+
+      properties: mongo
+      variables: mongo
+
+      twitter: mongo
+
+      spelling_corpus: mongo
+      license_keys: mongo
+
+      template_nodes: mongo
+      pattern_nodes: mongo
+
+      binaries: mongo
+      braintree: mongo
+
+      preprocessors: mongo
+      postprocessors: mongo
+
+      usergroups: mongo
+
+    stores:
+
+      mongo:
+        type:   mongo
+        config:
+          url: mongodb://localhost:27017
+          database: programy
+          drop_all_first: false
+
+  bots:
+    bot:
+      brain: brain
+
+      initial_question: Hi, how can I help you today?
+      initial_question_srai: YINITIALQUESTION
+      default_response: Sorry, I don't have an answer for that!
+      default_response_srai: YEMPTY
+      empty_string: YEMPTY
+      exit_response: So long, and thanks for the fish!
+      exit_response_srai: YEXITRESPONSE
+
+      override_properties: true
+
+      max_question_recursion: 1000
+      max_question_timeout: 60
+      max_search_depth: 100
+      max_search_timeout: 60
+
+      spelling:
+        load: true
+        classname: programy.spelling.norvig.NorvigSpellingChecker
+        check_before: false
+        check_and_retry: false
+
+      conversations:
+        save: true
+        load: false
+
+      brains:
+        brain:
+
+          # Overrides
+          overrides:
+            allow_system_aiml: true
+            allow_learn_aiml: true
+            allow_learnf_aiml: true
+
+          # Defaults
+          defaults:
+            default_get: unknown
+            default_property: unknown
+            default_map: unknown
+
+          # Binary
+          binaries:
+            save_binary: false
+            load_binary: false
+            load_aiml_on_binary_fail: false
+
+          debugfiles:
+            save-errors: true
+            save-duplicates: true
+
+          # Braintree
+          braintree:
+            create: False
+
+          security:
+            authentication:
+              classname: programy.security.authenticate.passthrough.BasicPassThroughAuthenticationService
+              denied_srai: AUTHENTICATION_FAILED
+            authorisation:
+              classname: programy.security.authorise.usergroupsauthorisor.BasicUserGroupAuthorisationService
+              denied_srai: AUTHORISATION_FAILED
+
+          dynamic:
+            variables:
+              gettime: programy.dynamic.variables.datetime.GetTime
+            sets:
+              numeric: programy.dynamic.sets.numeric.IsNumeric
+              roman:   programy.dynamic.sets.roman.IsRomanNumeral
+            maps:
+              romantodec: programy.dynamic.maps.roman.MapRomanToDecimal
+              dectoroman: programy.dynamic.maps.roman.MapDecimalToRoman
+

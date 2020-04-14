@@ -1,11 +1,14 @@
-#! /bin/sh
+@echo off
 
-clear
+cls
 
-if [ -z "${PYTHONPATH}" ]; then
-  echo "PYTHONPATH is undefined"
-  exit
-fi
+if not defined PYTHONPATH goto error
 
-python3 -m programy.clients.restful.flask.facebook.client --config ../../config/xnix/config.facebook.yaml --cformat yaml --logging ../../config/xnix/logging.yaml
+python -m programy.clients.restful.flask.facebook.client --config ..\..\config\windows\config.facebook.yaml --cformat yaml --logging ..\..\config\windows\logging.yaml
+goto end
+
+:error
+echo PYTHONPATH not set!
+
+:end
 
