@@ -1040,14 +1040,6 @@
         </template>
     </category>
     <category>
-        <pattern>THE 1 *</pattern>
-        <template>
-            <srai>THE ONE
-                <star/>
-            </srai>
-        </template>
-    </category>
-    <category>
         <pattern>YOUR TALKING TO</pattern>
         <template>
             <srai>TALKING TO</srai>

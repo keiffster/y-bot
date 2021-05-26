@@ -127,7 +127,7 @@ slack:
             file: ..\..\storage\processing\postquestionprocessors.conf
 
           usergroups_storage:
-            file: ..\..\storage\security\usergroups.yaml
+            file: ..\..\storage\security/usergroups.yaml
 
       logger:
         type:   logger

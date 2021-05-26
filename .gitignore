@@ -131,3 +131,6 @@ storage/debug/
 /storage/licenses/license.keys
 
 *.log
+
+*.tests
+*.results
